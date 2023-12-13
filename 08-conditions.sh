@@ -6,7 +6,7 @@ if [ $NUMBER1 -gt 100 ]
 then
 echo "Given number $NUMBER1 is greater than 100"
 
-if [ $NUMBER1 == 100 ]
+elif [ $NUMBER1 == 100 ]
 then
 echo "Given number $NUMBER1 is equal to 100"
 
