@@ -23,5 +23,5 @@
 echo "enter your user name: "
 
 read -s USERNAME    # this command will take input from user and stores in variable --> read <variable name>
-
-echo "username is : $USERNAME and password is : PASSWORD "
+read -s PASSWORD
+echo "username is : $USERNAME and password is : $PASSWORD "
