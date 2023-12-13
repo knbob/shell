@@ -8,8 +8,10 @@ echo "enter third number: "
 read NUM3
 
 if [ $NUM1 -gt $NUM2 ] && [ $NUM1 -gt $NUM3]
+then
 echo "first number $NUM1 is greatest"
 elif [ $NUM2 -gt $NUM1 ] && [ $NUM2 -gt $NUM3]
+then
 echo "second number $NUM2 is greatest"
 else
 echo "third number $NUM3 is greatest"
