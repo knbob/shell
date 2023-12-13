@@ -13,3 +13,4 @@ then
 echo "Given number $NUMBER1 is even number"
 else
 echo "Given number $NUMBER1 is odd number"
+fi
