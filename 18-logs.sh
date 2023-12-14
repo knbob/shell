@@ -8,7 +8,7 @@ ID=$(id -u)
 DATE=$(date +%x_%X)
 LOGFILE="/tmp/$0-$DATE.log"
 
-yum install mysql -y &>> LOGFILE
+yum install mysql -y &>> $LOGFILE
 
 # VALIDATE(){
 #     if [ $1 == 0 ]
