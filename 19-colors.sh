@@ -5,7 +5,7 @@ N="\e[0m"
 
 echo -e "Hello Iam learning $Y Shell script$N"
 
-echo -e " $R Hello$N $g how are you$N $y dear$N "
+echo -e " $R Hello$G how are you$Y dear$N "
 
 echo -e " $R printing in red - I am good bro $N "
 
