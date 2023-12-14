@@ -9,7 +9,7 @@ DATE=$(date +%x-%X)
 LOGFILE="/tmp/$0-$DATE.log"
 
 echo "script started running at $DATE" &>> $LOGFILE
-
+yum install mysql -y &>> LOGFILE
 # VALIDATE(){
 #     if [ $1 == 0 ]
 #     then
