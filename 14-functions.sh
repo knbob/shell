@@ -6,6 +6,6 @@ sum(){
     echo "enter another number: "
     read num2
     add=$(($num1 + $num2))
-    echo $add
+    echo "sum of 2 given numbers is $add"
 }
 sum
