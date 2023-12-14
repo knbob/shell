@@ -6,7 +6,7 @@
 
 ID=$(id -u)
 DATE=$(date +%x-%X)
-LOGFILE=/tmp/$0-$DATE.log
+LOGFILE="/tmp/$0-$DATE.log"
 
 VALIDATE(){
     if [ $1 == 0 ]
