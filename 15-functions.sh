@@ -8,6 +8,7 @@ VALIDATE(){
     echo "package installed successfully"
     else
     echo "package installation failed"
+    fi
 }
 
 yum install git -y
