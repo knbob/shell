@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# this programme introducing functions concept
 ID=$(id -u)
 
 VALIDATE(){

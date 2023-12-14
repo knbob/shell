@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+# this programme introducing functions concept
+
 sum(){
     echo "enter a number: "
     read num1
