@@ -11,4 +11,4 @@ echo -e " $R printing in red - I am good bro $N"
 
 echo -e " $Y prinitng in yellow - good morning bro $N"
 
-echo -e " $N its normalized"
+echo -e "its normalized"
