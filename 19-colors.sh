@@ -1,14 +1,14 @@
-r="\e[31m"
-g="\e[32m"
-y="\e[33m
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m
 N="\e[0m"
 
 echo -e "Hello Iam learning \e[31m Shell script"
 
-echo -e " \e[31m Hello $g how are you $y dear"
+echo -e " $R Hello $g how are you $y dear"
 
-echo -e " $r printing in red - I am good bro"
+echo -e " $R printing in red - I am good bro $N"
 
-echo -e " $y prinitng in yellow - good morning bro"
+echo -e " $Y prinitng in yellow - good morning bro $N"
 
-echo -e " $N its normalized
+echo -e " $N its normalized"
