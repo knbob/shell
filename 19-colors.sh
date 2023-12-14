@@ -3,9 +3,9 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-echo -e "Hello Iam learning $Y Shell script"
+echo -e "Hello Iam learning $Y Shell script$N"
 
-echo -e " $R Hello $g how are you $y dear "
+echo -e " $R Hello$N $g how are you$N $y dear$N "
 
 echo -e " $R printing in red - I am good bro $N "
 
