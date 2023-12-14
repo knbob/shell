@@ -13,7 +13,7 @@ echo "user logged in as normal user"
 exit 1         # this command will exit from the programme.
 fi
 
-yum install nginx -y
+yum install gitt -y
 
 # now we will check if the installation success or not
 
