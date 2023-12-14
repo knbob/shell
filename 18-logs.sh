@@ -25,7 +25,7 @@ echo " Please loggin as root user"
 exit 1
 fi
 
-yum install git -y &>>LOGFILE
+yum install git -y &>>$LOGFILE
 VALIDATE $? "Installing git package"
-yum install nginx -y &>>LOGFILE
+yum install nginx -y &>>$LOGFILE
 VALIDATE $? "Installing nginx package"
