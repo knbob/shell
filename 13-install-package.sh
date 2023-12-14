@@ -13,13 +13,13 @@ echo "user logged in as normal user"
 exit 1         # this command will exit from the programme.
 fi
 
-yum install gitt -y
+yum install git -y
 
 # now we will check if the installation success or not
 
 if [ $? == 0 ]
 then
-echo " nginx package installed successfully"
+echo " git package installed successfully"
 else
-echo " nginx package installation got failed"
+echo " git package installation got failed"
 fi
