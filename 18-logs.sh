@@ -5,7 +5,7 @@
 #if command failure &>>logfile -- entries of both success and failure.
 
 ID=$(id -u)
-DATE=$(date +%x-%X)
+DATE=$(date +%x_%X)
 LOGFILE="/tmp/$0-$DATE.log"
 
 echo "script started running at $DATE" &>> $LOGFILE
