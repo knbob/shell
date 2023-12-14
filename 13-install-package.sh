@@ -14,4 +14,12 @@ exit 1         # this command will exit from the programme.
 fi
 
 yum install nginx -y
-echo "checking the status after exit 1 command"
+
+# now we will check if the installation success or not
+
+if [ $? == 0 ]
+then
+echo " nginx package installed successfully"
+else
+echo " nginx package installation got failed"
+fi
