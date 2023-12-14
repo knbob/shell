@@ -4,7 +4,7 @@
 
 ID=$(id -u)
 
-if [ $ == 0 ]
+if [ $ID == 0 ]
 then
 echo " User logged in as root"
 else
