@@ -8,24 +8,26 @@ ID=$(id -u)
 DATE=$(date +%x-%X)
 LOGFILE="/tmp/$0-$DATE.log"
 
-VALIDATE(){
-    if [ $1 == 0 ]
-    then
-    echo " $2 is success"
-    else
-    echo "$2 is failed"
-    fi
-}
+echo "script started running at $DATE" &>> $LOGFILE
 
-if [ $ID == 0 ]
-then
-echo "user logged in as root user"
-else
-echo " Please loggin as root user"
-exit 1
-fi
+# VALIDATE(){
+#     if [ $1 == 0 ]
+#     then
+#     echo " $2 is success"
+#     else
+#     echo "$2 is failed"
+#     fi
+# }
 
-yum install git -y &>> $LOGFILE
-VALIDATE $? "Installing git package"
-yum install nginx -y &>> $LOGFILE
-VALIDATE $? "Installing nginx package"
+# if [ $ID == 0 ]
+# then
+# echo "user logged in as root user"
+# else
+# echo " Please loggin as root user"
+# exit 1
+# fi
+
+# yum install git -y &>> $LOGFILE
+# VALIDATE $? "Installing git package"
+# yum install nginx -y &>> $LOGFILE
+# VALIDATE $? "Installing nginx package"
