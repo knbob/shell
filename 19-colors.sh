@@ -3,7 +3,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-echo -e "Hello Iam learning \e[31m Shell script"
+echo -e "Hello Iam learning $Y Shell script"
 
 echo -e " $R Hello $g how are you $y dear "
 
