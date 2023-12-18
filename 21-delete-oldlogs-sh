@@ -1,0 +1,10 @@
+#!/bib/bash
+
+SOURCE_DIR=/tmp/shellscript-logs
+
+options(){
+
+    echo "Usage: $0 [-s <source-dir>] [-a <archive|delete>] [-d <destination>] [-t <day> -m <memory-in-mb>]"
+}
+
+options
