@@ -2,5 +2,5 @@
 
 for file in /etc/
 do
-    echo "$file"
+    echo "$(file)"
 done
