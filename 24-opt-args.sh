@@ -2,7 +2,7 @@
 
 
 name=""
-wishes=""
+wishes="Good Day"
 
 USAGE(){
     echo "Command Usage:: $(basename $0) -n <name> -w <wishes>"
@@ -23,7 +23,7 @@ do
     esac
 done
 
-if [ -z "$name"]
+if [ -z "$name" ]
 then
     echo "ERROR: -n is mandatory"
     USAGE
