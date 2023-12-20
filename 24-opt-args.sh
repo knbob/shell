@@ -7,19 +7,19 @@ wishes="Good Day"
 USAGE(){
     echo "Command Usage:: $(basename $0) -n <name> -w <wishes>"
     echo "Options: "
-    echo " -n, Specify the name (mandatory argument)"
-    echo " -w, Specify the wishes. (optional argument). Default is Good morning"
-    echo " -h, Display Help and exit"
+    echo " -n: Specify the name (mandatory argument)"
+    echo " -w: Specify the wishes. (optional argument). Default is Good morning"
+    echo " -h: Display Help and exit"
 }
 
 
 while getopts ":n:w:h" opt;
 do
     case $opt in
-        n) name="$OPTARG";;
-        w) wishes="$OPTARG";;
+        n) name="$optarg";;
+        w) wishes="$optarg";;
         h) USAGE; exit;;
-        \?) echo "invalid options: -"$OPTARG"" >&2; USAGE; exit;;
+        \?) echo "invalid options: -"$optarg"" >&2; USAGE; exit;;
     esac
 done
 
