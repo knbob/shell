@@ -10,7 +10,7 @@
 
 INSTANCES=("web" "catalogue" "cart")
 
-for i in $INSTANCES[@]
+for i in ${INSTANCES[@]}
 do
     echo $i
 done
