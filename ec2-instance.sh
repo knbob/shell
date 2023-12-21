@@ -9,8 +9,8 @@ for i in "${INSTANCES[@]}"
 do
     if [ $i == "mongodb" ] || [ $i == "mysql" ]
     then
-        #INSTANCE_TYPE="t3.small" if you want t3.small just uncomment this line and comment below line
-        INSTANCE_TYPE="t3.micro"
+        INSTANCE_TYPE="t3.small"     #if you want t3.small just uncomment this line and comment below line
+        #INSTANCE_TYPE="t2.micro"
     else
         INSTANCE_TYPE="t2.micro"
     
