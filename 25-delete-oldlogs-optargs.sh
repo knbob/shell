@@ -43,7 +43,7 @@ then
 fi
 
 #---------------------CHECKING DESTINATION DIR PROVIDED IF ARCHIVE OPTION CHOOSEN---------------
-if [ -z "$DESTINATION_DIR" ] && [ "$ACTION" == "arcive" ]
+if [ "$ACTION" == "arcive" ] && [ -z "$DESTINATION_DIR" ]
 then
     echo "ERROR:: -d option is mandatory when -a is archive"
     exit 1
@@ -52,25 +52,27 @@ fi
 if [ ! -d $SOURCE_DIR ] # ! denotes opposite
 then
     echo "Source directory: $SOURCE_DIR does not exists."
+    exit 1
 fi
 
 #-------------------------DELETE/ARCHIVE ACTION----------------------
 if [ "$ACTION"=="delete" ]
 then
-FILES_TO_DELETE=$(find $SOURCE_DIR -type f -mtime +"$DAYS" -name "*.log")
+    FILES_TO_DELETE=$(find $SOURCE_DIR -type f -mtime +"$DAYS" -name "*.log")
 
-while IFS= read -r line
-do
-    echo "Deleting file: $line"
-    rm -rf $line
-done <<< $FILES_TO_DELETE
+    while IFS= read -r line
+    do
+        echo "Deleting file: $line"
+        rm -rf $line
+    done <<< $FILES_TO_DELETE
 else
-FILES_TO_ARCHIVE=$(find $SOURCE_DIR -type f -mtime +"$DAYS" -name "*.log")
+    FILES_TO_ARCHIVE=$(find $SOURCE_DIR -type f -mtime +"$DAYS" -name "*.log")
 
-while IFS= read -r line
+    while IFS= read -r line
 do
     echo "Archiving file: $line"
     zip -r "$DESTINATION_DIR/$(basename "$line").zip"
     rm -rf $line
 done <<< $FILES_TO_ARCHIVE
+
 fi
