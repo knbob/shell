@@ -8,7 +8,7 @@ INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "cart" "catalogue" "user" "shipp
 
 for i in "${INSTANCES[@]}"
 do
-    if [ $i == "mongodb" ] || [ $i == "mysql" ]
+    if [ $i == "mongodb" ] || [ $i == "mysql" ] || [ $i == "shipping" ]
     then
         INSTANCE_TYPE="t3.small"     #if you want t3.small just uncomment this line and comment below line
         #INSTANCE_TYPE="t2.micro"
@@ -22,7 +22,7 @@ do
     aws route53 change-resource-record-sets --hosted-zone-id $HOSTED_ZONE_ID --change-batch '
     {
             "Changes": [{
-            "Action": "CREATE",
+            "Action": "UPSERT",
                         "ResourceRecordSet": {
                             "Name": "'$i.$DOMAIN_NAME'",
                             "Type": "A",
