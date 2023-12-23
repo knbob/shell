@@ -64,7 +64,7 @@ do
     echo $line
     if [ "$line"==0 ]
     then
-    echo " No .log files found older than $DAYS days"
+    echo " No log files found older than $DAYS days"
     else
     echo "Deleting file: $line"
     rm -rf $line
