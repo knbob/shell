@@ -68,7 +68,7 @@ then
 fi
 
 if [ "$ACTION"=="archive" ]
-
+then
     FILES_TO_ARCHIVE=$(find $SOURCE_DIR -type f -mtime +"$DAYS" -name "*.log")
 
     while IFS= read -r line
@@ -77,5 +77,4 @@ if [ "$ACTION"=="archive" ]
     zip -r "$DESTINATION_DIR/$(basename "$line").zip"
     rm -rf $line
     done <<< $FILES_TO_ARCHIVE
-
 fi
