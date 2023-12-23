@@ -59,16 +59,15 @@ if [ "$ACTION"=="delete" ]
 then
 FILES_TO_DELETE=$(find $SOURCE_DIR -type f -mtime +"$DAYS" -name "*.log")
 
+#-------------------------DELETE/ARCHIVE ACTION----------------------
+if [ "$ACTION"=="delete" ]
+then
+FILES_TO_DELETE=$(find $SOURCE_DIR -type f -mtime +"$DAYS" -name "*.log")
+
 while IFS= read -r line
 do
-    
-    if [ "$line"=="0" ]
-    then
-    echo " No log files found older than $DAYS days"
-    else
     echo "Deleting file: $line"
     rm -rf $line
-    fi
 done <<< $FILES_TO_DELETE
 else
 FILES_TO_ARCHIVE=$(find $SOURCE_DIR -type f -mtime +"$DAYS" -name "*.log")
