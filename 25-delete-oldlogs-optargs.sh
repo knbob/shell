@@ -62,7 +62,7 @@ FILES_TO_DELETE=$(find $SOURCE_DIR -type f -mtime +"$DAYS" -name "*.log")
 while IFS= read -r line
 do
     echo $line
-    if [ $line == '0' ]
+    if [ "$line"==0 ]
     then
     echo " No .log files found older than $DAYS days"
     else
