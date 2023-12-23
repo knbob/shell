@@ -34,6 +34,9 @@ do
     esac
 done
 
+echo "days : $DAYS"
+
+
 #------------------CHECKING ACTION ARGUMENT PROVIDED OR NOT---------------
 if [ -z "$ACTION" ] && [ -z "$SOURCE_DIR"]
 then
