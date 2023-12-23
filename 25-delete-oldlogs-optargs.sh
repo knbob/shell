@@ -66,13 +66,14 @@ then
         rm -rf $line
     done <<< $FILES_TO_DELETE
 else
+
     FILES_TO_ARCHIVE=$(find $SOURCE_DIR -type f -mtime +"$DAYS" -name "*.log")
 
     while IFS= read -r line
-do
+    do
     echo "Archiving file: $line"
     zip -r "$DESTINATION_DIR/$(basename "$line").zip"
     rm -rf $line
-done <<< $FILES_TO_ARCHIVE
+    done <<< $FILES_TO_ARCHIVE
 
 fi
