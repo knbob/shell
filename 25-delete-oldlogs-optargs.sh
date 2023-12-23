@@ -43,7 +43,7 @@ then
 fi
 
 #---------------------CHECKING DESTINATION DIR PROVIDED IF ARCHIVE OPTION CHOOSEN---------------
-if [ "$ACTION" == "arcive" ] && [ -z "$DESTINATION_DIR" ]
+if [ "$ACTION" == "archive" ] && [ -z "$DESTINATION_DIR" ]
 then
     echo "ERROR:: -d option is mandatory when -a is archive"
     exit 1
