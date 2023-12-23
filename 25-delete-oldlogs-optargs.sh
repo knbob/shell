@@ -74,7 +74,8 @@ then
     while IFS= read -r line
     do
     echo "Archiving file: $line"
-    zip -r "$DESTINATION_DIR$(basename "$line").zip"
+    echo "$(basename "$line")"
+    zip -r "$DESTINATION_DIR $(basename "$line").zip"
     rm -rf $line
     done <<< $FILES_TO_ARCHIVE
 fi
