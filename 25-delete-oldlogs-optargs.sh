@@ -35,9 +35,10 @@ do
 done
 
 #------------------CHECKING ACTION ARGUMENT PROVIDED OR NOT---------------
-if [ -z "$ACTION" ] 
+if [ -z "$ACTION" ] && [ -z "$SOURCE_DIR"]
 then
     echo "ERROR:: -a option is mandatory. Either Delete or Archive"
+    echo "ERROR:: -s option is mandatory. Eg. /home/centos/shell-logs"
     exit 1
 fi
 
