@@ -65,10 +65,7 @@ then
     echo "Deleting file: $line"
     rm -rf $line
     done <<< $FILES_TO_DELETE
-fi
-
-if [ "$ACTION"=="archive" ]
-then
+else
     FILES_TO_ARCHIVE=$(find $SOURCE_DIR -type f -mtime +"$DAYS" -name "*.log")
 
     while IFS= read -r line
