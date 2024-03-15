@@ -23,12 +23,15 @@ echo -e "$R ERROR:: Run the script with root access $N "
 exit 1
 fi
 
-sudo yum install -y yum-utils
+yum install -y yum-utils
 VALIDATE $? "Installing the yum-utils"
 
 
-sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 VALIDATE $? "Adding docker repo"
+
+yum install docker-ce
+VALIDATE $? "Installing Docker"
 
 systemctl start docker
 VALIDATE $? "Starting docker"
@@ -36,4 +39,4 @@ VALIDATE $? "Starting docker"
 usermod -aG docker centos
 VALIDATE $? "Adding user centos to docker group"
 
-logout
+exit
