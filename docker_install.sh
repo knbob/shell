@@ -30,7 +30,7 @@ VALIDATE $? "Installing the yum-utils"
 yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 VALIDATE $? "Adding docker repo"
 
-yum install docker-ce
+yum install -y docker-ce
 VALIDATE $? "Installing Docker"
 
 systemctl start docker
@@ -39,4 +39,4 @@ VALIDATE $? "Starting docker"
 usermod -aG docker centos
 VALIDATE $? "Adding user centos to docker group"
 
-exit
+logout
