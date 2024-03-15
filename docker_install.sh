@@ -40,3 +40,5 @@ usermod -aG docker centos
 VALIDATE $? "Adding user centos to docker group"
 
 logout
+
+exit
