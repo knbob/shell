@@ -42,4 +42,4 @@ VALIDATE $? "Enabled docker"
 usermod -aG docker centos
 VALIDATE $? "Adding user centos to docker group"
 
-echo " $R Please reboot the server $N"
+echo " $R Please Logout and Login into the server again $N"
