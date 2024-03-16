@@ -36,6 +36,9 @@ VALIDATE $? "Installing Docker"
 systemctl start docker
 VALIDATE $? "Starting docker"
 
+systemctl enable docker
+VALIDATE $? "Enabled docker"
+
 usermod -aG docker centos
 VALIDATE $? "Adding user centos to docker group"
 
